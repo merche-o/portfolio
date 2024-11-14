@@ -17,7 +17,7 @@ export default function Projects() {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "100px",
+    centerPadding: "60px",
   };
 
   const projects = [
@@ -88,13 +88,13 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="p-4  mx-4"
+              className="p-4 shadow-lg rounded-lg mx-2 sm:mx-4"
               initial="hidden"
               animate="visible"
               variants={fadeIn}
-              style={{ height: "750px" }}
+              style={{ height: "auto" }}
             >
-              <div className="relative w-full h-64 mb-4">
+              <div className="relative w-full h-48 sm:h-64 mb-4">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -103,8 +103,12 @@ export default function Projects() {
                   className="rounded-lg"
                 />
               </div>
-              <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <h2 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-4">
+                {project.title}
+              </h2>
+              <p className="text-sm sm:text-base text-gray-700 mb-2 sm:mb-4 line-clamp-3">
+                {project.description}
+              </p>
               <a
                 href={project.link}
                 className="text-blue-600 hover:underline"
