@@ -94,7 +94,7 @@ export default function Home() {
             >
               <h3 className="font-bold">Applotto</h3>
               <p className="text-gray-600">
-                Lead Developer • January 2024 – July 2024
+                Lead Developer • January 2024 - now
               </p>
               <ul className="mt-2 list-disc list-inside text-gray-700">
                 <li>
@@ -123,7 +123,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.5 }}
             >
               <h3 className="font-bold">Ballbolt</h3>
-              <p className="text-gray-600">Lead Developer • October 2023</p>
+              <p className="text-gray-600">Lead Developer • October 2023 - now</p>
               <ul className="mt-2 list-disc list-inside text-gray-700">
                 <li>
                   Developed and launched a mobile application using React
