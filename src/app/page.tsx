@@ -1,11 +1,39 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Projects from "./projects";
 export default function Home() {
   return (
     <div className="min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-2">Olivier Mercher</h1>
-          <p className="text-xl text-gray-600">Senior Mobile Developer</p>
-          <p className="text-gray-500 mt-2">Seoul • +821025092425</p>
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/images/profile.png"
+              alt="Profile Image"
+              width={250}
+              height={250}
+              className="rounded-full"
+            />
+          </div>
+          <motion.h1
+            className="text-4xl font-bold mb-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Olivier Mercher
+          </motion.h1>
+          <motion.p
+            className="text-xl text-gray-600"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+            Senior Lead Mobile Developer
+          </motion.p>
+          <p className="text-gray-500 mt-2">Remote • Seoul • +821025092425</p>
           <div className="flex justify-center gap-4 mt-4">
             <a
               href="https://linkedin.com/in/omercher"
@@ -22,22 +50,48 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="mb-12">
+        <motion.section
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <h2 className="text-2xl font-bold mb-4">About</h2>
-          <p className="text-gray-700">
-            Innovative and results-driven Mobile and Technical Project Manager
-            with extensive experience in leading development and implementation
-            of mobile applications and technology solutions. Proven track record
-            of managing cross-functional teams, delivering high-impact projects,
-            and improving user experiences. Skilled in iOS development, project
+          <motion.p
+            className="text-gray-700"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            Dynamic Lead mobile developer with a strong background in leading
+            the development and implementation of cross-platform applications.
+            Proven ability to manage cross-functional teams, deliver impactful
+            projects, and enhance user experiences. Expertise in project
             coordination, client management, and technical troubleshooting.
-          </p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Experience</h2>
+          </motion.p>
+        </motion.section>
+        <motion.section
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <Projects />
+        </motion.section>
+        <motion.section
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <h2 className="text-2xl font-bold mb-4">Professional Experience</h2>
           <div className="space-y-6">
-            <div className="border-l-2 border-gray-200 pl-4">
+            <motion.div
+              className="border-l-2 border-gray-200 pl-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <h3 className="font-bold">Applotto</h3>
               <p className="text-gray-600">
                 Lead Developer • January 2024 – July 2024
@@ -60,9 +114,14 @@ export default function Home() {
                   full development.
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="border-l-2 border-gray-200 pl-4">
+            <motion.div
+              className="border-l-2 border-gray-200 pl-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
               <h3 className="font-bold">Ballbolt</h3>
               <p className="text-gray-600">Lead Developer • October 2023</p>
               <ul className="mt-2 list-disc list-inside text-gray-700">
@@ -75,12 +134,17 @@ export default function Home() {
                   all technical aspects and optimizing the app for performance.
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="border-l-2 border-gray-200 pl-4">
+            <motion.div
+              className="border-l-2 border-gray-200 pl-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
               <h3 className="font-bold">Nomadher</h3>
               <p className="text-gray-600">
-                Fullstack Developer • January 2023 – July 2023
+                Fullstack Developer • January 2023 - July 2023
               </p>
               <ul className="mt-2 list-disc list-inside text-gray-700">
                 <li>
@@ -97,70 +161,94 @@ export default function Home() {
                   Actions for CI/CD pipelines.
                 </li>
                 <li>
-                  The app received multiple awards from Google and was
-                  highlighted by the Apple Store.
+                  Contributed to the application’s success, achieving over 300
+                  users within one month of release.
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="border-l-2 border-gray-200 pl-4">
+            <motion.div
+              className="border-l-2 border-gray-200 pl-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
               <h3 className="font-bold">Innosonian</h3>
               <p className="text-gray-600">
-                Technical Project Manager • October 2018 – September 2021
+                Technical Project Manager • October 2018 - September 2021
               </p>
               <ul className="mt-2 list-disc list-inside text-gray-700">
                 <li>
                   Spearheaded the development of an iOS application for
-                  monitoring CPR manikin vital signals.
+                  monitoring CPR manikin vital signals, ensuring accurate
+                  real-time feedback for proper CPR technique.
+                </li>
+                <li>
+                  Utilized native iOS development tools, including Swift and
+                  SwiftUI, and integrated CoreBluetooth for manikin
+                  connectivity.
                 </li>
                 <li>
                   Led the frontend/mobile development within a 10-person
-                  engineering team.
+                  engineering team, managing all aspects of the app&apos;s
+                  interface and user experience.
                 </li>
                 <li>
                   Achieved significant milestones, including partnerships with
-                  the American Red Cross.
-                </li>
-                <li>
-                  Adapted to COVID-19 by developing a web platform using React.
+                  the American Red Cross and deployments in hospitals and
+                  universities across the US and Europe.
                 </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="border-l-2 border-gray-200 pl-4">
+            <motion.div
+              className="border-l-2 border-gray-200 pl-4"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+            >
               <h3 className="font-bold">Ubudu Asia</h3>
               <p className="text-gray-600">
-                Technical Project Manager • June 2016 – September 2018
+                Technical Project Manager • June 2016 - September 2018
               </p>
               <ul className="mt-2 list-disc list-inside text-gray-700">
                 <li>
                   Managed all technical aspects of indoor localization projects
-                  across Asia.
+                  across Asia, utilizing proprietary devices such as iBeacon and
+                  ultra-wide band technologies.
                 </li>
                 <li>
                   Led key projects including an award-winning AR indoor location
-                  app.
+                  app developed in collaboration with Hong Kong&apos;s MTR and
+                  Madame Tussauds.
                 </li>
                 <li>
-                  Coordinated with international teams and managed client
-                  relationships.
+                  Coordinated with international teams based in France, Poland,
+                  and Hong Kong, overseeing technical implementation on the Hong
+                  Kong side.
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="mb-12">
+        <motion.section
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <h2 className="text-2xl font-bold mb-4">Skills</h2>
           <div className="flex flex-wrap gap-2">
             {[
+              "Flutter",
+              "Supabase",
               "iOS Development",
               "Swift",
               "SwiftUI/Combine",
-              "C++",
               "React Native",
               "React",
-              "Flutter",
+              "C++",
             ].map((skill) => (
               <span
                 key={skill}
@@ -170,9 +258,14 @@ export default function Home() {
               </span>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        <section className="mb-12">
+        <motion.section
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <h2 className="text-2xl font-bold mb-4">Languages</h2>
           <div className="space-y-2">
             <div className="flex items-center gap-2">
@@ -181,22 +274,27 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <span className="font-medium w-20">English:</span>
-              <span className="text-yellow-500">★★★★☆</span>
+              <span className="text-yellow-500">★★★★★</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="font-medium w-20">Korean:</span>
               <span className="text-yellow-500">★★☆☆☆</span>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="mb-12">
+        <motion.section
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <h2 className="text-2xl font-bold mb-4">Education</h2>
           <div className="space-y-4">
             <div>
               <h3 className="font-bold">EPITECH, Paris</h3>
               <p className="text-gray-600">
-                Master in Information Technology • September 2010 – January 2016
+                Master in Information Technology • September 2010 - January 2016
               </p>
               <p className="mt-2 text-gray-700">
                 Renowned programming school in Europe, innovative way to learn
@@ -206,7 +304,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );
