@@ -1,101 +1,213 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="max-w-4xl mx-auto">
+        <header className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-2">Olivier Mercher</h1>
+          <p className="text-xl text-gray-600">Senior Mobile Developer</p>
+          <p className="text-gray-500 mt-2">Seoul • +821025092425</p>
+          <div className="flex justify-center gap-4 mt-4">
+            <a
+              href="https://linkedin.com/in/omercher"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/merche-o"
+              className="text-blue-600 hover:underline"
+            >
+              GitHub
+            </a>
+          </div>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">About</h2>
+          <p className="text-gray-700">
+            Innovative and results-driven Mobile and Technical Project Manager
+            with extensive experience in leading development and implementation
+            of mobile applications and technology solutions. Proven track record
+            of managing cross-functional teams, delivering high-impact projects,
+            and improving user experiences. Skilled in iOS development, project
+            coordination, client management, and technical troubleshooting.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Experience</h2>
+          <div className="space-y-6">
+            <div className="border-l-2 border-gray-200 pl-4">
+              <h3 className="font-bold">Applotto</h3>
+              <p className="text-gray-600">
+                Lead Developer • January 2024 – July 2024
+              </p>
+              <ul className="mt-2 list-disc list-inside text-gray-700">
+                <li>
+                  Spearheaded the development of the MVP application using
+                  Flutter for the frontend and Supabase for the backend.
+                </li>
+                <li>
+                  Sole developer in a 5-person team, responsible for the
+                  complete technical execution of the project.
+                </li>
+                <li>
+                  Implemented CI/CD pipelines with Codemagic to enhance
+                  development efficiency.
+                </li>
+                <li>
+                  Successfully launched the MVP, crucial in securing funding for
+                  full development.
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-gray-200 pl-4">
+              <h3 className="font-bold">Ballbolt</h3>
+              <p className="text-gray-600">Lead Developer • October 2023</p>
+              <ul className="mt-2 list-disc list-inside text-gray-700">
+                <li>
+                  Developed and launched a mobile application using React
+                  Native, achieving over 300 users within one month.
+                </li>
+                <li>
+                  Led the project from development through deployment, handling
+                  all technical aspects and optimizing the app for performance.
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-gray-200 pl-4">
+              <h3 className="font-bold">Nomadher</h3>
+              <p className="text-gray-600">
+                Fullstack Developer • January 2023 – July 2023
+              </p>
+              <ul className="mt-2 list-disc list-inside text-gray-700">
+                <li>
+                  Developed and optimized a mobile application using React
+                  Native, focused on connecting women travelers for tips and
+                  companionship.
+                </li>
+                <li>
+                  Implemented key features including search and matching
+                  functionality, and enhanced app performance.
+                </li>
+                <li>
+                  Utilized Redux for state management and integrated GitHub
+                  Actions for CI/CD pipelines.
+                </li>
+                <li>
+                  The app received multiple awards from Google and was
+                  highlighted by the Apple Store.
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-gray-200 pl-4">
+              <h3 className="font-bold">Innosonian</h3>
+              <p className="text-gray-600">
+                Technical Project Manager • October 2018 – September 2021
+              </p>
+              <ul className="mt-2 list-disc list-inside text-gray-700">
+                <li>
+                  Spearheaded the development of an iOS application for
+                  monitoring CPR manikin vital signals.
+                </li>
+                <li>
+                  Led the frontend/mobile development within a 10-person
+                  engineering team.
+                </li>
+                <li>
+                  Achieved significant milestones, including partnerships with
+                  the American Red Cross.
+                </li>
+                <li>
+                  Adapted to COVID-19 by developing a web platform using React.
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-2 border-gray-200 pl-4">
+              <h3 className="font-bold">Ubudu Asia</h3>
+              <p className="text-gray-600">
+                Technical Project Manager • June 2016 – September 2018
+              </p>
+              <ul className="mt-2 list-disc list-inside text-gray-700">
+                <li>
+                  Managed all technical aspects of indoor localization projects
+                  across Asia.
+                </li>
+                <li>
+                  Led key projects including an award-winning AR indoor location
+                  app.
+                </li>
+                <li>
+                  Coordinated with international teams and managed client
+                  relationships.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Skills</h2>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "iOS Development",
+              "Swift",
+              "SwiftUI/Combine",
+              "C++",
+              "React Native",
+              "React",
+              "Flutter",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Languages</h2>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <span className="font-medium w-20">French:</span>
+              <span className="text-yellow-500">★★★★★</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-medium w-20">English:</span>
+              <span className="text-yellow-500">★★★★☆</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="font-medium w-20">Korean:</span>
+              <span className="text-yellow-500">★★☆☆☆</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">Education</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-bold">EPITECH, Paris</h3>
+              <p className="text-gray-600">
+                Master in Information Technology • September 2010 – January 2016
+              </p>
+              <p className="mt-2 text-gray-700">
+                Renowned programming school in Europe, innovative way to learn
+                programming through projects. Followed courses in C/C++
+                programming, 2D/3D graphics, system administration, and Unix
+                systems.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
