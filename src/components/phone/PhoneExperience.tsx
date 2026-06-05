@@ -20,7 +20,7 @@ function HeroCenter({
 }: {
   rotateX: MotionValue<number>;
   rotateY: MotionValue<number>;
-  phoneRef: RefObject<HTMLDivElement>;
+  phoneRef: RefObject<HTMLDivElement | null>;
 }) {
   const { activeApp } = usePhoneOS();
   const centerScale = useSpring(1, { stiffness: 160, damping: 22 });
