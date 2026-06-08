@@ -10,10 +10,12 @@ import {
   type ReactNode,
 } from "react";
 import type { AppId } from "@/data/apps";
+import { useDesktopNav } from "@/hooks/useDesktopNav";
 
 type PhoneOSContextValue = {
   activeApp: AppId | null;
   isMenuOpen: boolean;
+  isDesktopNav: boolean;
   openApp: (id: AppId) => void;
   closeApp: () => void;
   toggleMenu: () => void;
@@ -24,44 +26,61 @@ const PhoneOSContext = createContext<PhoneOSContextValue | null>(null);
 
 export function PhoneOSProvider({ children }: { children: ReactNode }) {
   const [activeApp, setActiveApp] = useState<AppId | null>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const isDesktopNav = useDesktopNav();
 
   useEffect(() => {
-    if (activeApp) {
-      setIsMenuOpen(true);
-    } else {
-      setIsMenuOpen(false);
+    if (!activeApp) {
+      setMenuOpen(false);
+      return;
     }
-  }, [activeApp]);
+
+    setMenuOpen(isDesktopNav);
+  }, [activeApp, isDesktopNav]);
+
+  const isMenuOpen = menuOpen && (!activeApp || isDesktopNav);
 
   const openApp = useCallback((id: AppId) => {
     setActiveApp(id);
-    setIsMenuOpen(true);
   }, []);
 
   const closeApp = useCallback(() => {
     setActiveApp(null);
-    setIsMenuOpen(false);
+    setMenuOpen(false);
   }, []);
 
   const toggleMenu = useCallback(() => {
-    setIsMenuOpen((open) => !open);
-  }, []);
+    if (activeApp && !isDesktopNav) {
+      setMenuOpen(false);
+      return;
+    }
+
+    setMenuOpen((open) => !open);
+  }, [activeApp, isDesktopNav]);
 
   const closeMenu = useCallback(() => {
-    setIsMenuOpen(false);
+    setMenuOpen(false);
   }, []);
 
   const value = useMemo(
     () => ({
       activeApp,
       isMenuOpen,
+      isDesktopNav,
       openApp,
       closeApp,
       toggleMenu,
       closeMenu,
     }),
-    [activeApp, isMenuOpen, openApp, closeApp, toggleMenu, closeMenu],
+    [
+      activeApp,
+      isMenuOpen,
+      isDesktopNav,
+      openApp,
+      closeApp,
+      toggleMenu,
+      closeMenu,
+    ],
   );
 
   return (
